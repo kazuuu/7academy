@@ -1,0 +1,1143 @@
+{
+	"info": {
+		"_postman_id": "ee0048f1-f4b9-4fe6-b559-5a609cd53b5c",
+		"name": "nerDevs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/user/get-user?userId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"get-user"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/user/list-users",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"list-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCurrentUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/user/get-current-user",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"get-current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmailExists",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "dudu@gmail.com"
+						},
+						"url": {
+							"raw": "{{host1}}/user/email-exists",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"email-exists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"login\": \"admin\",\r\n    \"nome\": \"atualizadooooooooo\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"sexo\": \"masculino\",\r\n    \"cep\": \"08070370\",\r\n    \"descricao\": \"eu continuo sem saber nada\",\r\n    \"indicacao\": \"não sei\",\r\n    \"dataNascimento\": \"1999-06-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/user/update-user",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"update-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EsqueciSenha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"admin\",\r\n    \"cpf\": \"12312312312\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/user/forgot-password",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrocarSenha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1234\",\r\n    \"newPassword\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/user/change-password",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"gabriel12\",\r\n    \"password\": \"123\",\r\n    \"nome\": \"nome\",\r\n    \"email\": \"usercs@gmail.com\",\r\n    \"cpf\": \"11122233349\",\r\n    \"dataNascimento\": \"2000-06-17\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/user/sign-up",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/login",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/user/delete-user?userId=2",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"delete-user"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "ListEmpresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/empresa/list-empresas",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"empresa",
+								"list-empresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmpresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/empresa/get-empresa?empresaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"empresa",
+								"get-empresa"
+							],
+							"query": [
+								{
+									"key": "empresaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEmpresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {  \r\n    \"id\": 1,\r\n    \"nome\": \"company - UPDATE\",\r\n    \"cnpj\": \"99999999999999\",\r\n    \"sobre\": \"teste - update\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/empresa/update-empresa",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"empresa",
+								"update-empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertEmpresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sobre\": \"aaaaaaaaaaa\",\r\n    \"cnpj\": \"99999999999999\",\r\n    \"nome\": \"testando\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/empresa/insert-empresa",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"empresa",
+								"insert-empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmpresa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/empresa/delete-empresa?empresaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"empresa",
+								"delete-empresa"
+							],
+							"query": [
+								{
+									"key": "empresaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Graduação",
+			"item": [
+				{
+					"name": "GetGraduacao",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/graduacao/get-graduacao?graduacaoId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"graduacao",
+								"get-graduacao"
+							],
+							"query": [
+								{
+									"key": "graduacaoId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListGraduacoesByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/graduacao/list-graduacoes-by-user-id?userId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"graduacao",
+								"list-graduacoes-by-user-id"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateGraduacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"escola\": {\r\n        \"id\": 1,\r\n        \"nome\": \"ATUALIZADOOOOOO\",\r\n        \"cep\":\"99999999\",\r\n        \"cnpj\":\"99999999999999\"\r\n    },\r\n    \"userId\": 1,\r\n    \"nivelGraduacao\": \"superior\",\r\n    \"nome\": \"ADS aaaaaaaaaaaa\",\r\n    \"dataInicio\": \"05/06/1865\",\r\n    \"dataFim\": \"31/12/2077\",\r\n    \"semestre\": 3,\r\n    \"concluido\": \"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/graduacao/update-graduacao",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"graduacao",
+								"update-graduacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertGraduacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"escolaNome\": \"escolanome\",\r\n    \"userId\": 1,\r\n    \"nivelGraduacao\": \"superior\",\r\n    \"nome\": \"ADS\",\r\n    \"dataInicio\": \"05/08/2019\",\r\n    \"dataFim\": \"30/06/2022\",\r\n    \"semestre\": 3,\r\n    \"concluido\": \"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/graduacao/insert-graduacao",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"graduacao",
+								"insert-graduacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteGraduacao",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/graduacao/delete-graduacao?graduacaoId=2",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"graduacao",
+								"delete-graduacao"
+							],
+							"query": [
+								{
+									"key": "graduacaoId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "ListByTipo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/post/list-posts-by-tipo?tipoId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"list-posts-by-tipo"
+							],
+							"query": [
+								{
+									"key": "tipoId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/post/list-posts-by-user-id?userId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"list-posts-by-user-id"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListPosts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/post/list-posts",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"list-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/post/get-post?postId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"get-post"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"tipoId\": 1,\r\n    \"titulo\": \"AAAAAAAAA\",\r\n    \"descricao\": \"aaaaaaaaa\",\r\n    \"vagaId\": null,\r\n    \"empresaId\": null,\r\n    \"escolaId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/post/insert-post",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"insert-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"userId\": 1,\r\n    \"tipoId\": 1,\r\n    \"titulo\": \"ATUALIZADOOOOOOOO\",\r\n    \"descricao\": \"aaaaaaaaa\",\r\n    \"vagaId\": null,\r\n    \"empresaId\": null,\r\n    \"escolaId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/post/update-post",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"update-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/post/delete-post?postId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"post",
+								"delete-post"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaga",
+			"item": [
+				{
+					"name": "ListVagasBySalarioRange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/vaga/list-vagas-by-salario-range?Min=100&Max=1001",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"list-vagas-by-salario-range"
+							],
+							"query": [
+								{
+									"key": "Min",
+									"value": "100"
+								},
+								{
+									"key": "Max",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListVagas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/vaga/list-vagas",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"list-vagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVaga",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/vaga/get-vaga?vagaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"get-vaga"
+							],
+							"query": [
+								{
+									"key": "vagaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertVaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {    \r\n        \"titulo\": \"AAAAAAAAAA\",\r\n        \"descricao\": \"aaaaaa\",\r\n        \"beneficios\": \"Beneficio\",\r\n        \"requisitos\": \"Requisito\",\r\n        \"empresaId\": 1,\r\n        \"quantidadeVagas\": 1,\r\n        \"salario\": 1000.0,\r\n        \"turno\": \"integral\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/vaga/insert-vaga",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"insert-vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateVaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {    \r\n        \"id\": 1,\r\n        \"titulo\": \"ATUALIZADOOOOOOOOO\",\r\n        \"descricao\": \"aaaaaa\",\r\n        \"beneficios\": \"Beneficio\",\r\n        \"requisitos\": \"Requisito\",\r\n        \"empresaId\": 1,\r\n        \"quantidadeVagas\": 1,\r\n        \"salario\": 1000.0,\r\n        \"turno\": \"integral\",\r\n        \"datetimeCreated\": \"2020-10-21\",\r\n        \"datetimeUpdated\": \"2021-10-21\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lhost1}}/vaga/update-vaga",
+							"host": [
+								"{{lhost1}}"
+							],
+							"path": [
+								"vaga",
+								"update-vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JoinVaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/vaga/join-vaga?vagaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"join-vaga"
+							],
+							"query": [
+								{
+									"key": "vagaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IsJoined",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vagaId\":1,\r\n    \"email\":\"dudu@gmail.com\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/vaga/is-joined",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"is-joined"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVaga",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/vaga/delete-vaga?vagaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"vaga",
+								"delete-vaga"
+							],
+							"query": [
+								{
+									"key": "vagaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Escola",
+			"item": [
+				{
+					"name": "ListEscolas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/escola/list-escolas",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"escola",
+								"list-escolas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEscola",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/escola/get-escola?escolaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"escola",
+								"get-escola"
+							],
+							"query": [
+								{
+									"key": "escolaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertEscola",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"AAAAAA\",\r\n    \"cnpj\": \"99999999999999\",\r\n    \"cep\": \"99999999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/escola/insert-escola",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"escola",
+								"insert-escola"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEscola",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"ATUALIZADOOOOOO\",\r\n    \"cnpj\": \"99999999999999\",\r\n    \"cep\": \"99999999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/escola/update-escola",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"escola",
+								"update-escola"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEscola",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/escola/delete-escola?escolaId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"escola",
+								"delete-escola"
+							],
+							"query": [
+								{
+									"key": "escolaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Curriculo",
+			"item": [
+				{
+					"name": "ListMyCurriculos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/curriculo/list-my-curriculos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"curriculo",
+								"list-my-curriculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetArquivoByCurriculoId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/curriculo/get-arquivo-by-curriculo-id?curriculoId=14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"curriculo",
+								"get-arquivo-by-curriculo-id"
+							],
+							"query": [
+								{
+									"key": "curriculoId",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertCurriculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/EDUARDO SAWADA/Desktop/teste.pdf"
+							}
+						},
+						"url": {
+							"raw": "{{host}}/curriculo/insert-curriculo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"curriculo",
+								"insert-curriculo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsImV4cCI6MTYxMTk0NzE1Niwicm9sIjpbIlJPTEVfVVNFUiJdfQ.pagdMeyzmKDFEL1tHoc4CBNkShUj5gIuTjLrB7m6YHTIUOWGzj3LejqYaqpMDYgKWUvohWQclXzvQSCPUS7ZmA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host1",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "host",
+			"value": "http://localhost:8080"
+		}
+	]
+}
