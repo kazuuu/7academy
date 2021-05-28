@@ -1,4 +1,5 @@
 package br.com.sevencomm.nerdevs.application.configs.security.jwt.handler;
+
 import br.com.sevencomm.nerdevs.application.configs.security.jwt.ServletUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
@@ -13,15 +14,18 @@ import java.io.IOException;
 */
 @Component
 public class AccessDeniedHandler implements org.springframework.security.web.access.AccessDeniedHandler {
-@Override
-public void handle(
-HttpServletRequest request,
-HttpServletResponse response,
-AccessDeniedException exc) throws IOException {
-Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-if (auth != null) {
-String json = ServletUtil.getJson("error", "Acesso negado.");
-ServletUtil.write(response, HttpStatus.FORBIDDEN, json);
-}
-}
+
+    @Override
+    public void handle(
+        HttpServletRequest request,
+        HttpServletResponse response,
+        AccessDeniedException exc) throws IOException {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        if (auth != null) {
+            String json = ServletUtil.getJson("error", "Acesso negado.");
+            ServletUtil.write(response, HttpStatus.FORBIDDEN, json);
+        }
+    }
+    
 }
